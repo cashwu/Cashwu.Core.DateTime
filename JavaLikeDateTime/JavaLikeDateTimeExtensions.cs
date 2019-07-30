@@ -46,5 +46,16 @@ namespace JavaLikeDateTime
         {
             return DateTime.DaysInMonth(current.Year, current.Month);
         }
+
+        /// <summary>
+        /// Combines this DateTime with a day-of-month to create a DateTime.
+        /// </summary>
+        /// <param name="current"></param>
+        /// <param name="dayOfMonth"></param>
+        /// <returns></returns>
+        public static DateTime AtDay(this DateTime current, int dayOfMonth)
+        {
+            return new DateTime(current.Year, current.Month, dayOfMonth, current.Hour, current.Minute, current.Second, current.Millisecond);
+        }
     }
 }
