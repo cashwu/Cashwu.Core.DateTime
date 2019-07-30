@@ -1,5 +1,5 @@
 version: 1.0.{build}
-image: Visual Studio 2017
+image: Ubuntu1804
 before_build:
   - dotnet restore
   - choco install opencover.portable
