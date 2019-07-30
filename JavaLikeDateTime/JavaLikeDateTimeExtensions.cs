@@ -57,5 +57,16 @@ namespace JavaLikeDateTime
         {
             return new DateTime(current.Year, current.Month, dayOfMonth, current.Hour, current.Minute, current.Second, current.Millisecond);
         }
+
+        /// <summary>
+        /// Returns a copy of this DateTime with the month-of-year altered.
+        /// </summary>
+        /// <param name="current"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
+        public static DateTime WithMonth(this DateTime current, int month)
+        {
+            return new DateTime(current.Year, month, current.Day, current.Hour, current.Minute, current.Second, current.Millisecond);
+        }
     }
 }
