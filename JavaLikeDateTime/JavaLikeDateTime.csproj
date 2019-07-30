@@ -2,6 +2,16 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <DebugType>full</DebugType>
+        <PackageId>Cashwu.JavaLikeDateTime</PackageId>
+        <PackageProjectUrl>https://github.com/cashwu/JavaLikeDateTime</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageDescription>Java Like C# DateTime Extension</PackageDescription>
+        <Version>1.0.1</Version>
+        <Company>cashwu</Company>
+        <AssemblyName>Cashwu.JavaLikeDateTime</AssemblyName>
+        <RootNamespace>Cashwu.JavaLikeDateTime</RootNamespace>
+        <Authors>cashwu</Authors>
     </PropertyGroup>
 
 </Project>
