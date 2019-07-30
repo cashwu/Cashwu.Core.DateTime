@@ -36,5 +36,15 @@ namespace JavaLikeDateTime
             var daysInMonth = DateTime.DaysInMonth(current.Year, current.Month);
             return new DateTime(current.Year, current.Month, daysInMonth, current.Hour, current.Minute, current.Second, current.Millisecond);
         }
+
+        /// <summary>
+        /// Returns the length of the month, taking account of the year.
+        /// </summary>
+        /// <param name="current"></param>
+        /// <returns></returns>
+        public static int LengthOfMonth(this DateTime current)
+        {
+            return DateTime.DaysInMonth(current.Year, current.Month);
+        }
     }
 }
