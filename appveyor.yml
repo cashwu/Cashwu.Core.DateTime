@@ -1,0 +1,33 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+before_build:
+  - dotnet restore
+  - choco install opencover.portable
+  - choco install codecov
+build:
+  verbosity: minimal
+build_script:
+  - dotnet build
+after_build:
+  - dotnet pack
+test_script:
+  - OpenCover.Console.exe -register:user -target:"dotnet.exe" -targetargs:"test" -filter:"+[*]* -[*.Tests]* " -output:"coverage.xml" -oldstyle
+  - codecov -f "coverage.xml"
+artifacts:
+  - path: .\JavaLikeDataTime\bin\Debug\*.nupkg
+deploy:
+  - provider: NuGet
+    server:
+    api_key:
+      secure: YEJhUxU+B84sRzK4ChFAaFwLwC5zhn612E6sFwbu0kNKH20l3AxaH8ouH98Qp4kV
+    skip_symbols: false
+    symbol_server:
+    artifact: /.*\.nupkg/
+    on:
+      branch: master
+
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      secure: phSiyDQ19vgqYVDTBfmNNP06mpm3BU1Lnuz0Myx+mcXy2t/gqzSuejdku61ZGJbEEsctmMF/IwU3uxRqit4YbI5XnX5uc9mKZw0QJAcBf9A=
+    channel: build
