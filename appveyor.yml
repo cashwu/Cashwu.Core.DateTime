@@ -14,7 +14,7 @@ test_script:
   - OpenCover.Console.exe -register:user -target:"dotnet.exe" -targetargs:"test" -filter:"+[*]* -[*.Tests]* " -output:"coverage.xml" -oldstyle
   - codecov -f "coverage.xml"
 artifacts:
-  - path: .\JavaLikeDataTime\bin\Debug\*.nupkg
+  - path: .\JavaLikeDateTime\bin\Debug\*.nupkg
 deploy:
   - provider: NuGet
     server:
