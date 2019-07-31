@@ -1,6 +1,6 @@
 using System;
 
-namespace JavaLikeDateTime
+namespace Cashwu.JavaLikeDateTime
 {
     public static class JavaLikeDateTimeExtensions
     {
