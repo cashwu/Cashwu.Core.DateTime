@@ -18,7 +18,7 @@ jobs:
       - name: test
         run: |
           dotnet tool install -g coverlet.console
-          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./opencover.xml ./Cashwu.Core.DateTime.Tests/Cashwu.Core.DateTime.Tests.csproj
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../opencover.xml ./Cashwu.Core.DateTime.Tests/Cashwu.Core.DateTime.Tests.csproj
           ls -al
       - name: upload coverage to codecov
         uses: codecov/codecov-action@v1.0.5
