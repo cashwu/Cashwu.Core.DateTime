@@ -1,8 +1,6 @@
-using System;
-
-namespace Cashwu.JavaLikeDateTime
+namespace Cashwu.Core.DateTime
 {
-    public static class JavaLikeDateTimeExtensions
+    public static class DateTimeExtensions
     {
         /// <summary>
         /// Checks if this current DateTime is after the specified (other) DateTime.
@@ -10,7 +8,7 @@ namespace Cashwu.JavaLikeDateTime
         /// <param name="current"></param>
         /// <param name="other"></param>
         /// <returns></returns>
-        public static bool IsAfter(this DateTime current, DateTime other)
+        public static bool IsAfter(this System.DateTime current, System.DateTime other)
         {
             return current > other;
         }
@@ -21,7 +19,7 @@ namespace Cashwu.JavaLikeDateTime
         /// <param name="current"></param>
         /// <param name="other"></param>
         /// <returns></returns>
-        public static bool IsBefore(this DateTime current, DateTime other)
+        public static bool IsBefore(this System.DateTime current, System.DateTime other)
         {
             return current < other;
         }
@@ -31,10 +29,10 @@ namespace Cashwu.JavaLikeDateTime
         /// </summary>
         /// <param name="current"></param>
         /// <returns></returns>
-        public static DateTime AtEndOfMonth(this DateTime current)
+        public static System.DateTime AtEndOfMonth(this System.DateTime current)
         {
-            var daysInMonth = DateTime.DaysInMonth(current.Year, current.Month);
-            return new DateTime(current.Year, current.Month, daysInMonth, current.Hour, current.Minute, current.Second, current.Millisecond);
+            var daysInMonth = System.DateTime.DaysInMonth(current.Year, current.Month);
+            return new System.DateTime(current.Year, current.Month, daysInMonth, current.Hour, current.Minute, current.Second, current.Millisecond);
         }
 
         /// <summary>
@@ -42,9 +40,9 @@ namespace Cashwu.JavaLikeDateTime
         /// </summary>
         /// <param name="current"></param>
         /// <returns></returns>
-        public static int LengthOfMonth(this DateTime current)
+        public static int LengthOfMonth(this System.DateTime current)
         {
-            return DateTime.DaysInMonth(current.Year, current.Month);
+            return System.DateTime.DaysInMonth(current.Year, current.Month);
         }
 
         /// <summary>
@@ -53,9 +51,9 @@ namespace Cashwu.JavaLikeDateTime
         /// <param name="current"></param>
         /// <param name="dayOfMonth"></param>
         /// <returns></returns>
-        public static DateTime AtDay(this DateTime current, int dayOfMonth)
+        public static System.DateTime AtDay(this System.DateTime current, int dayOfMonth)
         {
-            return new DateTime(current.Year, current.Month, dayOfMonth, current.Hour, current.Minute, current.Second, current.Millisecond);
+            return new System.DateTime(current.Year, current.Month, dayOfMonth, current.Hour, current.Minute, current.Second, current.Millisecond);
         }
 
         /// <summary>
@@ -64,9 +62,9 @@ namespace Cashwu.JavaLikeDateTime
         /// <param name="current"></param>
         /// <param name="month"></param>
         /// <returns></returns>
-        public static DateTime WithMonth(this DateTime current, int month)
+        public static System.DateTime WithMonth(this System.DateTime current, int month)
         {
-            return new DateTime(current.Year, month, current.Day, current.Hour, current.Minute, current.Second, current.Millisecond);
+            return new System.DateTime(current.Year, month, current.Day, current.Hour, current.Minute, current.Second, current.Millisecond);
         }
     }
 }

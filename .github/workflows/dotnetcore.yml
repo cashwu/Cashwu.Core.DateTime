@@ -1,0 +1,34 @@
+name: .NET Core
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: setup
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 2.2.207
+      - name: clean
+        run: dotnet clean -c Release
+      - name: build
+        run: dotnet build
+      - name: test
+        run: |
+          dotnet tool install -g coverlet.console
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../opencover.xml ./Cashwu.Core.DateTime.Tests/Cashwu.Core.DateTime.Tests.csproj
+      - name: generate build number
+        if: github.ref == 'refs/heads/master'
+        uses: einaregilsson/build-number@v2
+        with:
+          token: ${{secrets.github_token}}
+      - name: dotnet pack
+        if: github.ref == 'refs/heads/master'
+        run: dotnet pack ./Cashwu.Core.DateTime/Cashwu.Core.DateTime.csproj -c Release -o ../release -p:PackageVersion=1.0.$BUILD_NUMBER
+      - name: nuget publish
+        if: github.ref == 'refs/heads/master'
+        continue-on-error: true
+        run: |
+          dotnet nuget push ./release/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json

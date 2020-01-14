@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <DebugType>full</DebugType>
+        <PackageId>Cashwu.Core.DateTime</PackageId>
+        <PackageProjectUrl>https://github.com/cashwu/Cashwu.Core.DateTime</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageDescription>C# Core DateTime</PackageDescription>
+        <Version>1.0.0</Version>
+        <Company>cashwu</Company>
+        <AssemblyName>Cashwu.Core.DateTime</AssemblyName>
+        <RootNamespace>Cashwu.Core.DateTime</RootNamespace>
+        <Authors>cashwu</Authors>
+    </PropertyGroup>
+
+</Project>

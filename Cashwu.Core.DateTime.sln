@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaLikeDateTime", "JavaLikeDateTime\JavaLikeDateTime.csproj", "{3FBEA561-A2C3-4B05-8841-92CF6FAA33CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashwu.Core.DateTime", "Cashwu.Core.DateTime\Cashwu.Core.DateTime.csproj", "{3FBEA561-A2C3-4B05-8841-92CF6FAA33CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaLikeDateTime.Tests", "JavaLikeDateTime.Tests\JavaLikeDateTime.Tests.csproj", "{8FA65FCF-DF66-474F-A78A-08091BD8ADA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashwu.Core.DateTime.Tests", "Cashwu.Core.DateTime.Tests\Cashwu.Core.DateTime.Tests.csproj", "{8FA65FCF-DF66-474F-A78A-08091BD8ADA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
