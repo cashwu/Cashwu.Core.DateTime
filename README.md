@@ -1,12 +1,12 @@
-# Java like C# DateTime Extension
+# Cashwu.Core.DateTime
 
-[![Build status](https://ci.appveyor.com/api/projects/status/0b8x3cjia80ej9a1?svg=true)](https://ci.appveyor.com/project/cashwu/javalikedatetime)
+[![actions](https://github.com/cashwu/Cashwu.Core.DateTime/workflows/.NET%20Core/badge.svg?branch=master)](https://github.com/cashwu/Cashwu.Core.DateTime/actions)
 
-[![codecov](https://codecov.io/gh/cashwu/JavaLikeDateTime/branch/master/graph/badge.svg)](https://codecov.io/gh/cashwu/JavaLikeDateTime)
+[![codecov](https://codecov.io/gh/cashwu/cashwu.core.datetime/branch/master/graph/badge.svg)](https://codecov.io/gh/cashwu/Cashwu.Core.DateTime)
 
 ---
 
-[![Nuget](https://img.shields.io/badge/Nuget-JavaLikeDateTime-blue.svg)](https://www.nuget.org/packages/Cashwu.JavaLikeDateTime/)
+[![Nuget](https://img.shields.io/badge/Nuget-Cashwu.Core.DateTime-blue.svg)](https://www.nuget.org/packages/Cashwu.Core.DateTime)
 
 ---
 
