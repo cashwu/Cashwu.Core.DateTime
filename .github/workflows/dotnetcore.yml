@@ -27,15 +27,15 @@ jobs:
           flags: unittests
           name: Cashwu.Core.DateTime
       - name: generate build number
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && contains(toJson(github.event.commits), '[update]') == true
         uses: einaregilsson/build-number@v2
         with:
           token: ${{secrets.github_token}}
       - name: dotnet pack
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && contains(toJson(github.event.commits), '[update]') == true
         run: dotnet pack ./Cashwu.Core.DateTime/Cashwu.Core.DateTime.csproj -c Release -o ../release -p:PackageVersion=1.0.$BUILD_NUMBER
       - name: nuget publish
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && contains(toJson(github.event.commits), '[update]') == true
         continue-on-error: true
         run: |
           dotnet nuget push ./release/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
